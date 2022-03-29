@@ -9,7 +9,7 @@ public class CustomerListExample {
 
   public static void main(String[] args) {
     String fileName =
-      "C:/Users/jerom/Documents/GitHub/class-java/linked-list-lab/lab/src/main/java/com/example/customer_data.json";
+      "F:/Github/lab-week9/demo/src/main/java/com/example/customer_data.json";
 
     // read customers names
     JSONArray customerArray = JSONFile.readArray(fileName);
@@ -49,6 +49,8 @@ public class CustomerListExample {
        * write the code to create one customer and the customer
        * to the customerList linked list
        */
+      Customer cust = new Customer(id, name, email);
+      customerList.add(cust);
     }
   }
 
@@ -57,5 +59,12 @@ public class CustomerListExample {
     /*
      * write the code to print the linked list
      */
+    int i = 1;
+    for(Customer consumer: customerList)
+    {
+      System.out.printf("%s.%n", i);
+      consumer.print();
+      i++;
+    }
   }
 }
